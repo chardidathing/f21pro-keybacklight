@@ -1,6 +1,6 @@
 id=f21pro-keybacklight
 name=Keyboard Backlight Enabler For Qin F21 Pro
-version=v1.0.5
-versionCode=105
+version=v1.0.6
+versionCode=106
 author=rainyskye
 description=Magisk Module for Duoqin F21 Pro to enable keypad backlight support.

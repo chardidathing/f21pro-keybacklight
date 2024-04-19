@@ -15,7 +15,20 @@ LCD_VALUE=$(cat ${LCD_BRIGHTNESS_FILE})
 if [ "$LCD_VALUE" -eq 0 ]; then
     echo 0 > $LED1_FILE
     echo 0 > $LED2_FILE
-    sleep 0.5
+    # JANK - I WILL FIND THE PROPER TIMING EVENTUALLY
+    sleep 0.1
+    echo 0 > $LED1_FILE
+    echo 0 > $LED2_FILE
+    # JANK - I WILL FIND THE PROPER TIMING EVENTUALLY
+    sleep 0.2
+    echo 0 > $LED1_FILE
+    echo 0 > $LED2_FILE
+    # JANK - I WILL FIND THE PROPER TIMING EVENTUALLY
+    sleep 0.3
+    echo 0 > $LED1_FILE
+    echo 0 > $LED2_FILE
+    # JANK - I WILL FIND THE PROPER TIMING EVENTUALLY
+    sleep 0.4
     echo 0 > $LED1_FILE
     echo 0 > $LED2_FILE
 else
@@ -32,7 +45,7 @@ else
     else
         echo 0 > $LED1_FILE
         echo 0 > $LED2_FILE
-        sleep 0.5
+        sleep 0.3
         echo 0 > $LED1_FILE
         echo 0 > $LED2_FILE
     fi
