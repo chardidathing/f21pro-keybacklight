@@ -29,6 +29,9 @@ else
     else
         echo 0 > $LED1_FILE
         echo 0 > $LED2_FILE
+        sleep 0.5
+        echo 0 > $LED1_FILE
+        echo 0 > $LED2_FILE
     fi
 fi
 
