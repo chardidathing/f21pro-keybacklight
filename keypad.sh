@@ -15,6 +15,9 @@ LCD_VALUE=$(cat ${LCD_BRIGHTNESS_FILE})
 if [ "$LCD_VALUE" -eq 0 ]; then
     echo 0 > $LED1_FILE
     echo 0 > $LED2_FILE
+    sleep 0.5
+    echo 0 > $LED1_FILE
+    echo 0 > $LED2_FILE
 else
     # Get light sensor value (THIS IS JANK AS SHIT AND ONLY WORKS IF AUTOBRIGHTNESS IS ON AAAAAAA)
     LIGHT_SENSOR_VALUE=$(dumpsys sensorservice | grep "LIGHT: last 50 events" -A 50 | tail -n 1 | awk '{gsub(/.00,/, "", $(NF-2)); print $(NF-2)}')
